@@ -1,0 +1,16 @@
+// -q is quite option
+
+//gradle -q tasks -all to show all task
+
+// To run toLower gradle -q toLower
+
+task toLower {
+    doLast {
+        String someString = 'HELLO FROM BAELDUNG'
+        println "Original: "+ someString
+        println "Lower case: " + someString.toLowerCase()
+    }
+}
+
+// Using apply allows use of aplugin
+apply from: 'aplugin.gradle'
