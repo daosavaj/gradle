@@ -1,0 +1,16 @@
+//defaultTask creates a default task to be executed if task is not specified.
+
+//gradle -q
+
+defaultTasks 'toLower'
+
+task toLower {
+
+        String someString = 'HELLO FROM '
+        println "Original: "+ someString
+        println "Lower case: " + someString.toLowerCase()
+
+}
+
+// Using apply allows use of aplugin
+apply from: 'aplugin.gradle'
